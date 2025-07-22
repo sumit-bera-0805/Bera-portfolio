@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Bera - Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Sumit Bera</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Sumit Bera</span></h1>
+                <p class="hero-subtitle">Tech Enthusiast | B.Tech at BIT Sindri</p>
+                <p class="hero-description">Passionate about technology, always learning, and ready to take on new challenges that drive innovation and growth.</p>
+                <div class="hero-buttons">
+                    <a href="#skills" class="btn btn-primary">View Skills</a>
+                    <button class="btn btn-secondary" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-photo">
+                    <!-- Replace 'profile.jpg' with your actual image file -->
+                    <img src="profile.jpg" alt="Sumit Bera" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="profile-placeholder" style="display: none;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Sumit Bera. I'm a motivated and curious individual who loves learning new things and improving my skills. I'm always open to new opportunities and enjoy working on projects that help me grow both personally and professionally.</p>
+                    <p>Currently pursuing B.Tech at BIT Sindri, I'm passionate about technology and constantly exploring new areas in software development, cybersecurity, and emerging technologies.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>2+</h3>
+                        <p>Years of Learning</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>6+</h3>
+                        <p>Programming Languages</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Multiple</h3>
+                        <p>Certifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-code"></i>
+                    <h3>C</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-code"></i>
+                    <h3>C++</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Adobe Photoshop</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech (Currently Pursuing)</h3>
+                        <h4>BIT Sindri, Dhanbad</h4>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p>Bachelor of Technology in progress, focusing on comprehensive technical education and practical application of engineering principles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Intermediate</h3>
+                        <h4>Karim City College, Jamshedpur</h4>
+                        <p class="timeline-date">2021 - 2023</p>
+                        <p>Completed higher secondary education with focus on science and mathematics, building strong foundational knowledge.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Matriculation</h3>
+                        <h4>S S Vidyamandir H/S, Baharagora</h4>
+                        <p class="timeline-date">2019 - 2021</p>
+                        <p>Completed secondary education with excellent academic performance, establishing a strong base for future studies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-image">
+                        <img src="achievement-government-award.jpg" alt="Government Recognition Award" class="achievement-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="achievement-icon" style="display: none;">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <h3>Government Recognition Award</h3>
+                    <p>Honored by Governor C.P. Radhakrishnan & Former CM Hemant Soren for academic excellence in JEE/NEET 2023, recognized by Jharkhand Vidhan Sabha.</p>
+                    <div class="achievement-badge">2023</div>
+                </div>
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="achievement-image">
+                        <img src="achievement-ncat-rank.jpg" alt="NCAT 2025 Achievement" class="achievement-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="achievement-icon" style="display: none;">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <h3>NCAT 2025 - All India Rank 1212</h3>
+                    <p>Achieved All India Rank 1212 in AINCAT 2025 aptitude test organized by Naukri Campus and DoSelect, demonstrating strong analytical and problem-solving skills.</p>
+                    <div class="achievement-badge">2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <!-- Google Cybersecurity Certification Collection -->
+                <div class="certification-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="cert-collection-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Google Cybersecurity</h3>
+                        <p class="cert-count">9 Certificates</p>
+                    </div>
+                    <div class="cert-grid">
+                        <img src="certificates/google-cybersecurity/1.jpg" alt="Google Cybersecurity Certificate 1" class="cert-thumb" onclick="openCertModal('google-cybersecurity', 9, 'Google Cybersecurity')">
+                        <img src="certificates/google-cybersecurity/2.jpg" alt="Google Cybersecurity Certificate 2" class="cert-thumb" onclick="openCertModal('google-cybersecurity', 9, 'Google Cybersecurity')">
+                        <img src="certificates/google-cybersecurity/3.jpg" alt="Google Cybersecurity Certificate 3" class="cert-thumb" onclick="openCertModal('google-cybersecurity', 9, 'Google Cybersecurity')">
+                        <img src="certificates/google-cybersecurity/4.jpg" alt="Google Cybersecurity Certificate 4" class="cert-thumb" onclick="openCertModal('google-cybersecurity', 9, 'Google Cybersecurity')">
+                        <div class="more-certs">+5 more</div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Security Fundamentals</span>
+                        <span class="skill-tag">Risk Management</span>
+                        <span class="skill-tag">Threat Analysis</span>
+                        <span class="skill-tag">Cyber Defense</span>
+                    </div>
+                </div>
+
+                <!-- Data Visualization Certification Collection -->
+                <div class="certification-card" data-aos="flip-right" data-aos-delay="200">
+                    <div class="cert-collection-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Data Visualization</h3>
+                        <p class="cert-count">17 Certificates</p>
+                    </div>
+                    <div class="cert-grid">
+                        <img src="certificates/data-visualization/1.jpg" alt="Data Visualization Certificate 1" class="cert-thumb" onclick="openCertModal('data-visualization', 17, 'Data Visualization')">
+                        <img src="certificates/data-visualization/2.jpg" alt="Data Visualization Certificate 2" class="cert-thumb" onclick="openCertModal('data-visualization', 17, 'Data Visualization')">
+                        <img src="certificates/data-visualization/3.jpg" alt="Data Visualization Certificate 3" class="cert-thumb" onclick="openCertModal('data-visualization', 17, 'Data Visualization')">
+                        <img src="certificates/data-visualization/4.jpg" alt="Data Visualization Certificate 4" class="cert-thumb" onclick="openCertModal('data-visualization', 17, 'Data Visualization')">
+                        <div class="more-certs">+13 more</div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Chart Design</span>
+                        <span class="skill-tag">Dashboard Creation</span>
+                        <span class="skill-tag">Statistical Visualization</span>
+                    </div>
+                </div>
+
+                <!-- Introduction to Cybersecurity Certification -->
+                <div class="certification-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="cert-image-placeholder">
+                        <img src="cert-intro-cybersecurity.jpg" alt="Introduction to Cybersecurity Certificate" class="cert-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="cert-icon-fallback" style="display: none;">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Introduction to Cybersecurity</h3>
+                        <p>Foundational course covering essential cybersecurity principles, threat landscape, and security best practices for digital protection.</p>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Security Basics</span>
+                            <span class="skill-tag">Threat Awareness</span>
+                            <span class="skill-tag">Digital Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="cert-modal">
+        <div class="cert-modal-content">
+            <div class="cert-modal-header">
+                <h3 id="modalTitle"></h3>
+                <span class="cert-modal-close">&times;</span>
+            </div>
+            <div class="cert-modal-body">
+                <div class="cert-gallery" id="certGallery"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9508089577</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:sumitbera89@gmail.com">sumitbera89@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/sumit-bera-715966282" target="_blank">www.linkedin.com/in/sumit-bera-715966282</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sumit Bera. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sumit-bera-715966282" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sumitbera89@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
