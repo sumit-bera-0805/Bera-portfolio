@@ -84,17 +84,48 @@ function animateOnScroll() {
     });
 }
 
-// Skill bars animation
+// Star ratings generation
+function generateStarRatings() {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    skillItems.forEach(item => {
+        const skillBar = item.querySelector('.skill-bar');
+        const progressBar = item.querySelector('.skill-progress');
+        if (!skillBar || !progressBar) return;
+
+        const width = progressBar.getAttribute('data-width');
+        const percentage = parseInt(width) / 100;
+        const stars = Math.round(percentage * 5); // 5 stars max
+
+        // Create star rating container
+        const starRating = document.createElement('div');
+        starRating.className = 'star-rating';
+
+        // Generate 5 stars
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement('span');
+            star.className = 'star';
+            star.innerHTML = '★';
+            if (i <= stars) {
+                star.classList.add('filled');
+            }
+            starRating.appendChild(star);
+        }
+
+        // Replace skill bar with star rating
+        skillBar.parentNode.replaceChild(starRating, skillBar);
+    });
+}
+
+// Skill bars animation (kept for compatibility, but now used for star generation)
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
-    
+
     skillBars.forEach(bar => {
         const barTop = bar.getBoundingClientRect().top;
         const barVisible = 150;
-        
+
         if (barTop < window.innerHeight - barVisible && !bar.classList.contains('animated')) {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width;
             bar.classList.add('animated');
         }
     });
@@ -314,56 +345,7 @@ function initializeLightbox() {
     }
 }
 
-// Certificate Modal Functions
-function openCertModal(folderName, certCount, title) {
-    const modal = document.getElementById('certModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const gallery = document.getElementById('certGallery');
-    
-    modalTitle.textContent = title + ' Certificates';
-    gallery.innerHTML = '';
-    
-    for (let i = 1; i <= certCount; i++) {
-        const img = document.createElement('img');
-        img.src = `certificates/${folderName}/${i}.jpg`;
-        img.alt = `${title} Certificate ${i}`;
-        img.onclick = function() {
-            openLightbox(this.src, this.alt);
-        };
-        gallery.appendChild(img);
-    }
-    
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
 
-function openLightbox(src, alt) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.querySelector('.lightbox-caption');
-    
-    lightbox.style.display = 'block';
-    lightboxImg.src = src;
-    lightboxCaption.textContent = alt;
-}
-
-// Close certificate modal
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('certModal');
-    const closeBtn = document.querySelector('.cert-modal-close');
-    
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-    
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-});
 
 // Add CSS for ripple effect
 const style = document.createElement('style');
@@ -396,10 +378,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize scroll animations
     animateOnScroll();
     animateSkillBars();
-    
+
+    // Generate star ratings for skills
+    generateStarRatings();
+
     // Initialize lightbox
     initializeLightbox();
-    
+
     // Add loaded class for any additional animations
     setTimeout(() => {
         document.body.classList.add('page-loaded');
